@@ -21,7 +21,7 @@ exports.answerQuestion = catchAsync(async (req, res, next) => {
 exports.getAnswersToQuestion = catchAsync(async (req, res, next) => {
 
 
-    const question = await Question.find({ questionId: req.query.id });
+    const question = await Answer.find({ questionId: req.query.id });
     if (question) {
         res.status(200).json({
             status: 'success',
