@@ -20,8 +20,8 @@ exports.answerQuestion = catchAsync(async (req, res, next) => {
 
 exports.getAnswersToQuestion = catchAsync(async (req, res, next) => {
 
-    console.log(req.body)
-    const question = await Question.find({ questionId: req.body.id });
+
+    const question = await Question.find({ questionId: req.query.id });
     if (question) {
         res.status(200).json({
             status: 'success',
