@@ -17,7 +17,7 @@ router.post('/askquestion', questionController.askQuestion);
 
 
 // answer routes
-router.post('/answersofquestion', answerController.getAnswersToQuestion);
+router.get('/answersofquestion', answerController.getAnswersToQuestion);
 router.post('/answertoquestion', answerController.answerQuestion);
 
 module.exports = router;
