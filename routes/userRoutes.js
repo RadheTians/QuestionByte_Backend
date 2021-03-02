@@ -14,6 +14,7 @@ router.post('/login', authController.login);
 // question routes
 router.get('/allquestions', questionController.getAllQuestions);
 router.post('/askquestion', questionController.askQuestion);
+router.post('/updownvotequestion', questionController.upAndDownVoteQuestion);
 
 
 // answer routes
