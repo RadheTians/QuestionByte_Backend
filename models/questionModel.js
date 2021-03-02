@@ -23,6 +23,10 @@ const questionSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
+    answers: {
+        type: Number,
+        default: 0
+    },
     votes: {
         type: [String],
         default: []
