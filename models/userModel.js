@@ -20,10 +20,15 @@ const userSchema = new mongoose.Schema({
     type: Number,
     length: [10, 'Please provide 10 digit contact number']
   },
+  gender: {
+    type: String,
+    enum: ['Male', 'Female'],
+    default: 'Male'
+  },
   role: {
     type: String,
-    enum: ['faculty', 'student', 'staff'],
-    default: 'student'
+    enum: ['Faculty', 'Student', 'Staff'],
+    default: 'Student'
   },
   password: {
     type: String,

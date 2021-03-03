@@ -27,6 +27,10 @@ const questionSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    voteCount: {
+        type: Number,
+        default: 0
+    },
     votes: {
         type: [String],
         default: []

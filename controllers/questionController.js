@@ -20,6 +20,7 @@ exports.askQuestion = catchAsync(async (req, res, next) => {
 exports.upAndDownVoteQuestion = catchAsync(async (req, res, next) => {
 
     const question = await Question.findById(req.body.id);
+    question.voteCount = question.voteCount + req.body.vote;
     question.votes.push(req.body.userId);
     await question.save();
     res.status(200).json({
