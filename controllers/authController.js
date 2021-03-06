@@ -97,6 +97,29 @@ exports.login = catchAsync(async (req, res, next) => {
   
 });
 
+exports.getUser = catchAsync(async (req, res, next) => {
+
+  const user = await User.findById(req.query.id)
+  res.status(200).json({
+    status: 'success',
+    data: user
+  });
+});
+
+exports.updateUser = catchAsync(async (req, res, next) => {
+
+  const updatedDocUser = await docUser.findByIdAndUpdate(
+      req.body.id, req.body, {
+          new: true,
+          runValidators: true
+      }
+  );
+  res.status(200).json({
+      status: 'success',
+      data: updatedDocUser
+      
+  })
+});
 exports.protect = catchAsync(async (req, res, next) => {
   // 1) Getting token and check of it's there
   let token;

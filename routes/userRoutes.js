@@ -9,6 +9,8 @@ const router = express.Router();
 // user routes
 router.post('/signup', authController.signup);
 router.post('/login', authController.login);
+router.get('/getuser', authController.getUser);
+router.put('/updateuser', authController.updateUser);
 
 
 // question routes
