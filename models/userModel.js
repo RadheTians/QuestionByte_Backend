@@ -7,12 +7,14 @@ const userSchema = new mongoose.Schema({
   userName: {
     type: String,
     lowercase: true,
+    unique: true,
     minlength: 2,
     maxlength: 10,
   },
   email: {
     type: String,
     lowercase: true,
+    unique: true,
     minlength: 2,
     validate: [validator.isEmail, 'Please provide a valid email']
   },
