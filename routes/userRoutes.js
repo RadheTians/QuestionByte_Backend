@@ -2,6 +2,7 @@ const express = require('express');
 const authController = require('./../controllers/authController');
 const questionController = require('./../controllers/questionController');
 const answerController = require('./../controllers/answerController');
+const userController = require('./../controllers/userController');
 
 const router = express.Router();
 
@@ -12,6 +13,8 @@ router.post('/login', authController.login);
 router.get('/getuser', authController.getUser);
 router.put('/updateuser', authController.updateUser);
 
+//all user routes
+router.get('/alluser', userController.getAllUsers);
 
 // question routes
 router.get('/allquestions', questionController.getAllQuestions);

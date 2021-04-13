@@ -16,6 +16,34 @@ const userSchema = new mongoose.Schema({
     minlength: 2,
     validate: [validator.isEmail, 'Please provide a valid email']
   },
+  name: {
+    type: String,
+    default: ''
+  },
+  about: {
+    type: String,
+    default: ''
+  },
+  department: {
+    type: String,
+    default: ''
+  },
+  college: {
+    type: String,
+    default: ''
+  },
+  dob: {
+    type: String,
+    default: ''
+  },
+  github: {
+    type: String,
+    default: ''
+  },
+  linkedIn: {
+    type: String,
+    default: ''
+  },
   contactNo: {
     type: Number,
     length: [10, 'Please provide 10 digit contact number']
@@ -30,6 +58,7 @@ const userSchema = new mongoose.Schema({
     enum: ['Faculty', 'Student', 'Staff'],
     default: 'Student'
   },
+
   password: {
     type: String,
     required: [true, 'Please provide a password'],
