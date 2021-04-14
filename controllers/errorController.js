@@ -17,7 +17,7 @@ const handleDuplicateFieldsDB = (err) => {
     const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
     message = `${value} already exists. Please use another!`;
   }
-  return new ErrorUtil(message, 400);
+  return new ErrorUtil(message, 200);
 };
 
 const handleValidationErrorDB = (err) => {
