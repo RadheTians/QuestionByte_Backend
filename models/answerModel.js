@@ -9,6 +9,10 @@ const answerSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    userGender :{
+        type: String,
+        required: true
+    },
     userName :{
         type: String,
         required: true
